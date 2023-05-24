@@ -14,6 +14,7 @@
   - [2023 Modifications](#2023-modifications)
     - [Error: Incompatible types: got "Pointer" expected "TBitmap"](#error-incompatible-types-got-pointer-expected-tbitmap)
     - [External Function Declarations](#external-function-declarations)
+    - [Error: Incompatible type for arg no. 5: Got "TBuffer", expected "Pointer"](#error-incompatible-type-for-arg-no-5-got-tbuffer-expected-pointer)
 
 # T7GGrvEx
 
@@ -100,3 +101,18 @@ The following changes were made to `AviWriter.pas` (original commented out):
   function CreateEditableStream(var ppsEditable: PAVISTREAM; psSource: PAVISTREAM): HResult; stdcall; external 'avifil32.dll' name 'CreateEditableStream';
   function AVISaveV(szFile: PChar; pclsidHandler: PCLSID; lpfnCallback: TAVISaveCallback; nStreams: integer; pavi: APAVISTREAM; lpOptions: APAVICompressOptions): HResult; stdcall; external 'avifil32.dll' name 'AVISaveV';
   ```
+
+  ### Error: Incompatible type for arg no. 5: Got "TBuffer", expected "Pointer"
+
+  The procedure `Dump8BitBMP` seems to be expecting a Pointer type as its fifth argument, but `OutBuf` which is of type `TBuffer` is being passed instead.
+
+If `TBuffer` is a dynamic array, you can pass a pointer to its first element to the Dump8BitBMP procedure:
+
+  ```pascal
+  {
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, OutBuf);
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @OutBuf[0]);
+```

@@ -2,6 +2,7 @@
   Author : Deniz Oezmen; Matt Seabrook
   Created: 2005-05-27, based on VDXEXT.PAS created ~2000
   Changed: 2005-11-29, unknown changes by original author
+  Changed: 2023-05-24, to work with FPC cross-platform
 
   The 7th Guest VDX extractor.
 }

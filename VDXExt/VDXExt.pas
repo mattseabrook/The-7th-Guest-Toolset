@@ -261,8 +261,12 @@ begin
     end
   end;
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, OutBuf);
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @OutBuf[0]);
 
   SetLength(FrameBuf, High(OutBuf) + 1);
   FrameBuf := Copy(OutBuf, 0, High(OutBuf) + 1)
