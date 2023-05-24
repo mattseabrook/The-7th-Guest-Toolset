@@ -15,17 +15,17 @@
     - [Error: Incompatible types: got "Pointer" expected "TBitmap"](#error-incompatible-types-got-pointer-expected-tbitmap)
     - [External Function Declarations](#external-function-declarations)
 
-## T7GGrvEx
+# T7GGrvEx
 
 No refactoring was required for this program. 
 
-### Build
+## Build
 
-#### Windows & Mac OS X
+### Windows & Mac OS X
 
 Open `T7GGrvEx.lpi` in Lazarus and press `CTRL`+`F9` to build.
 
-#### Linux
+### Linux
 
 Invoke the Free Pascal Compiler (FPC) from the command-line:
 
@@ -37,37 +37,37 @@ fpc -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -Fu. -FU. -FE. -oT7GGrvEx T7GGrvEx.p
 rm -f *.o
 ```
 
-### Usage
+## Usage
 
 x
 
-## VDXExt
+# VDXExt
 
 Check out the section below for a full list of modifications made to the original source code.
 
-### Build
+## Build
 
-#### Windows
+### Windows
 
 x
 
-#### Linux & Mac OS X
+### Linux & Mac OS X
 
 `avifil32.dll` is a Windows DLL that is required to compile the program. It is not available on Linux or Mac OS X.
 
-### Usage
+## Usage
 
 x
 
-### 2023 Modifications
+## 2023 Modifications
 
-#### Error: Incompatible types: got "Pointer" expected "TBitmap"
+### Error: Incompatible types: got "Pointer" expected "TBitmap"
 
 This error message indicates that the variable `Bitmaps[i]` is a pointer, but `ExtBitmap` is expecting a `TBitmap`.
 
 `ExtBitmap := Bitmaps[i];` was changed to `ExtBitmap := TBitmap(Bitmaps[i]);` twice in `AviWriter.pas` on line 350 and 460.
 
-#### External Function Declarations
+### External Function Declarations
 
 Modern compilers like Free Pascal Compiler (FPC), used in the Lazarus IDE, have introduced new standards and practices to improve code safety, readability, and maintainability. This includes stricter typing and syntax rules that can lead to issues when trying to compile older Delphi code that was written under a different set of standards.
 
