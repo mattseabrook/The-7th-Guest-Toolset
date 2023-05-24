@@ -757,4 +757,5 @@ end;
   function CreateEditableStream(var ppsEditable: PAVISTREAM; psSource: PAVISTREAM): HResult; stdcall; external 'avifil32.dll' name 'CreateEditableStream';
   function AVISaveV(szFile: PChar; pclsidHandler: PCLSID; lpfnCallback: TAVISaveCallback; nStreams: integer; pavi: APAVISTREAM; lpOptions: APAVICompressOptions): HResult; stdcall; external 'avifil32.dll' name 'AVISaveV';
 
+
 end.

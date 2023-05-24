@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="VDXExt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="41" Y="11"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="AviWriter.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="728"/>
+        <CursorPos Y="751"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1425"/>
+        <CursorPos X="3" Y="1441"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="15">
+      <Position>
+        <Filename Value="VDXExt.pas"/>
+        <Caret Line="11" Column="41"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="53" Column="40" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="26" Column="52" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="351" Column="35" TopLine="335"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="329" TopLine="317"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="350" Column="8" TopLine="335"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="341" Column="59" TopLine="334"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="460" Column="36" TopLine="444"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="461" Column="58" TopLine="444"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="735" Column="23" TopLine="699"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="351" Column="52" TopLine="336"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="450" Column="69" TopLine="435"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="735" TopLine="714"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="227" Column="155" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="736" Column="157" TopLine="714"/>
+      </Position>
+      <Position>
+        <Filename Value="AviWriter.pas"/>
+        <Caret Line="751" Column="25" TopLine="728"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
