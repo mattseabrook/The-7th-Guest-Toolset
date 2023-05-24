@@ -1,7 +1,7 @@
-{ File   : T7GGrvEx.dpr
-  Author : Deniz Oezmen
+{ File   : T7GGrvEx.pas
+  Author : Deniz Oezmen; Matt Seabrook
   Created: 2006-03-18, based on T7GGRVEX.PAS created ~2000
-  Changed: 2006-03-18
+  Changed: 2023-05-24, based on T7GGrvEx.dpr created ~2006
 
   GJD/RL extractor for The 7th Guest.
 }
