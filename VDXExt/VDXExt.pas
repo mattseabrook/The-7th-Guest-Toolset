@@ -11,7 +11,7 @@ program VDXExt;
 {$APPTYPE CONSOLE}
 
 uses
-  SysUtils, StrUtils, SaveBMP2, AviWriter, Graphics;
+  SysUtils, StrUtils, SaveBMP2, AviWriter, Graphics, Interfaces;        // Interfaces added for 2023
 
 type
   TVDXHeader   = packed record
@@ -409,8 +409,12 @@ begin
     Inc(i)
   end;
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, FrameBuf)
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @FrameBuf[0])
 end;
 
 procedure WriteAudFrame(Buffer: TBuffer);
@@ -512,8 +516,12 @@ begin
   Inc(VidFrames);
   Inc(VidAdded);
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, FrameBuf)
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @FrameBuf[0])
 end;
 
 procedure PadVideo(VDXName: string);

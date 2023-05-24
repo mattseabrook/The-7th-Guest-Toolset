@@ -11,7 +11,7 @@ program VDXExt;
 {$APPTYPE CONSOLE}
 
 uses
-  SysUtils, StrUtils, SaveBMP2, AviWriter, Graphics;
+  SysUtils, StrUtils, SaveBMP2, AviWriter, Graphics, Interfaces;
 
 type
   TVDXHeader   = packed record
@@ -261,8 +261,12 @@ begin
     end
   end;
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, OutBuf);
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @OutBuf[0]);
 
   SetLength(FrameBuf, High(OutBuf) + 1);
   FrameBuf := Copy(OutBuf, 0, High(OutBuf) + 1)
@@ -405,8 +409,12 @@ begin
     Inc(i)
   end;
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, FrameBuf)
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @FrameBuf[0])
 end;
 
 procedure WriteAudFrame(Buffer: TBuffer);
@@ -508,8 +516,12 @@ begin
   Inc(VidFrames);
   Inc(VidAdded);
 
+  {
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, FrameBuf)
+  }
+  Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
+    BMPHeader.Width, BMPHeader.Height, Palette3, @FrameBuf[0])
 end;
 
 procedure PadVideo(VDXName: string);

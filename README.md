@@ -15,6 +15,7 @@
     - [Error: Incompatible types: got "Pointer" expected "TBitmap"](#error-incompatible-types-got-pointer-expected-tbitmap)
     - [External Function Declarations](#external-function-declarations)
     - [Error: Incompatible type for arg no. 5: Got "TBuffer", expected "Pointer"](#error-incompatible-type-for-arg-no-5-got-tbuffer-expected-pointer)
+    - [LCL, LCLBase, and Interfaces](#lcl-lclbase-and-interfaces)
 
 # T7GGrvEx
 
@@ -50,7 +51,7 @@ Check out the section below for a full list of modifications made to the origina
 
 ### Windows
 
-x
+Open `VDXExt.lpi` in Lazarus and press `CTRL`+`F9` to build.
 
 ### Linux & Mac OS X
 
@@ -116,3 +117,8 @@ If `TBuffer` is a dynamic array, you can pass a pointer to its first element to 
   Dump8BitBMP(Prefix(VDXName) + '#' + IntToStrL(VidFrames - 1, 4) + '.bmp',
     BMPHeader.Width, BMPHeader.Height, Palette3, @OutBuf[0]);
 ```
+
+### LCL, LCLBase, and Interfaces
+
+- The `uses` clause was updated to include `Interfaces`
+- `LCL` and `LCLBase` were added to the Lazarus project file dependencies
